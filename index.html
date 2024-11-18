@@ -12,6 +12,12 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | Contact form</title>
   </head>
@@ -46,28 +52,68 @@
    -->
 
     <main>
-      <div class="container">
-        <form id="form" action="/">
+      <div class="card">
+        <form action="/">
           <h1>Contact Us</h1>
-          <div class="input-control">
-            <label for="firstName">First Name</label>
-            <input id="firstName" id="firstName" name="firstName" type="text" />
+          <div class="name">
+            <div class="first-name">
+              <label for="firstname">First Name <span>*</span></label>
+              <input class="three-inputs" type="text" id="firstname" />
+              <div class="error"></div>
+            </div>
+            <div class="last-name">
+              <label for="lastname">Last Name <span>*</span></label>
+              <input class="three-inputs" type="text" id="lastname" />
+              <div class="error"></div>
+            </div>
+          </div>
+
+          <div class="email">
+            <label for="email">Email <span>*</span></label>
+            <input class="three-inputs" type="text" id="email" />
             <div class="error"></div>
           </div>
 
-          <div class="input-control">
-            <label for="lastName"> Last Name</label>
-            <input id="lastName" id="lastName" name="firstName" type="text" />
-            <div class="error"></div>
+          <div class="query">
+            <label for="query">Query Type <span>*</span></label>
+            <div class="general">
+              <input
+                class="radio-btn"
+                type="radio"
+                id="general"
+                name="enquiry"
+              />
+              <label for="general">General Enquiry</label>
+            </div>
+            <div class="support">
+              <input
+                class="radio-btn"
+                type="radio"
+                id="support"
+                name="enquiry"
+              />
+              <label for="support">Support Enquiry</label>
+            </div>
           </div>
 
-          <div class="input-control">
-            <label for="email">Email Address</label>
-            <input id="email" name="firstName" type="text" />
-            <div class="error"></div>
+          <div class="text-area">
+            <label for="message">Message <span>*</span></label>
+            <textarea name="" id="message" rows="10"></textarea>
           </div>
+
+          <div class="consent">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox"
+              >I consent to being contacted by the team</label
+            >
+          </div>
+
+          <!-- <input class="btn" type="submit" /> -->
+           <button class="btn">Submit</button>
         </form>
       </div>
     </main>
+
+    <script defer src="index.js"></script>
   </body>
 </html>
