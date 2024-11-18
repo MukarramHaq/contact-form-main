@@ -61,8 +61,9 @@ input[type='radio']:checked:before{
 body{
     font-family: Karla, sans-serif;
     background-color: #E0F1E8;
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 100svh;
 }
 
@@ -78,6 +79,10 @@ form{
 
 span{
     color: hsl(169, 82%, 27%);
+}
+
+input{
+    font-family: Karla, sans-serif;
 }
 
 .three-inputs{
@@ -133,6 +138,8 @@ textarea{
     border-radius: 0.3rem;
     margin-bottom: 46px;
     border: 1px solid hsl(186, 15%, 59%);
+    font-family: Karla, sans-serif;
+    outline: 0;
 }
 
 .general,
@@ -191,4 +198,32 @@ textarea{
     font-weight: 700;
     letter-spacing: 2px;
     border: none;
+}
+
+@media (min-width: 740px){
+    .card{
+        width: 740px;
+    }
+
+    .name{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .query{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .support{
+        margin-top: 16px;
+        flex-grow: 1;
+    }
+
+    .general{
+        flex-grow: 1;
+    }
 }
